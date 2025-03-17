@@ -1,0 +1,18 @@
+import cv2
+
+video = cv2.VideoCapture(r'C:\Video\Nau an.mp4')
+if not video.isOpened():
+    print("Video khong ton tai!!!")
+while True:
+    ret,frame = video.read()
+    if ret:
+        # gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        cv2.imshow('Video nau an', frame)
+
+    if cv2.waitKey(25) == ord('s'):
+       cv2.imwrite(r'C:\Anhdep\gray.jpg', frame)
+    if cv2.waitKey(25) == ord('q'):break
+
+
+video.release()
+cv2.destroyAllWindows()
