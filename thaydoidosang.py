@@ -1,5 +1,5 @@
 import cv2
-from tensorflow.python.framework.ops import get_default_graph
+
 
 img = cv2.imread(r'C:\Anhdep\1.jpg')
 print(img.shape)
