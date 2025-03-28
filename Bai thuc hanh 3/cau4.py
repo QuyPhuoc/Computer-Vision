@@ -11,13 +11,10 @@ y1 = int(input('Nhap y1: '))
 x2 = int(input('Nhap x2: '))
 y2 = int(input('Nhap y2: '))
 
-if x1 > x2 and y1 > y2:
-    print('Error')
-    exit()
-if x1 < x2 < w and y1 < y2 < h:
-    crop = img[y1:y2, x1:x2]
-cv2.imwrite(r'C:\Anhdep\2.jpg', crop)
+crop_img = img[y1: y2, x1: x2]
+
 cv2.imshow('Anh goc', img)
-cv2.imshow('Cropped Image', crop)
+cv2.imshow('Crop', crop_img)
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
