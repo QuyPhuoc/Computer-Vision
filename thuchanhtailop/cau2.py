@@ -35,11 +35,11 @@ plt.show()
 # Nhấn Q để lưu lại kết quả
 while True:
         if ord('q'):
-            cv2.imwrite(r'C:\CV\Bai thuc hanh 4\Image\xam.jpg', gray)
-            cv2.imwrite(r'C:\CV\Bai thuc hanh 4\Image\gauss.jpg', gauss)
-            cv2.imwrite(r'C:\CV\Bai thuc hanh 4\Image\thresh.jpg', thresh)
-            cv2.imwrite(r'C:\CV\Bai thuc hanh 4\Image\open.jpg', open)
-            cv2.imwrite(r'C:\CV\Bai thuc hanh 4\Image\close.jpg', close)
-            cv2.imwrite(r'C:\CV\Bai thuc hanh 4\Image\grad.jpg', grad)
+            cv2.imwrite(r'/thuchanhtailop/Image\xam.jpg', gray)
+            cv2.imwrite(r'/thuchanhtailop/Image\gauss.jpg', gauss)
+            cv2.imwrite(r'/thuchanhtailop/Image\thresh.jpg', thresh)
+            cv2.imwrite(r'/thuchanhtailop/Image\open.jpg', open)
+            cv2.imwrite(r'/thuchanhtailop/Image\close.jpg', close)
+            cv2.imwrite(r'/thuchanhtailop/Image\grad.jpg', grad)
             print('OKE, DONE')
             break

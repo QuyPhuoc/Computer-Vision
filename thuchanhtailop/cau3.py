@@ -2,7 +2,6 @@ import cv2
 
 img = cv2.imread(r'C:\Anhdep\trump.jpg')
 cv2.namedWindow('trump')
-
 img_new = cv2.resize(img, None, fx=0.5, fy=0.5)
 h,w = img.shape[:2]
 x = 0
@@ -22,7 +21,7 @@ while True:
     if ord('p'):
         cv2.imshow('trump', img_new)
     if ord('s'):
-        cv2.imwrite(r'C:\CV\Bai thuc hanh 4\Image.jpg', img)
+        cv2.imwrite(r'/thuchanhtailop/Image/Image.jpg', img)
     if ord('q'): break
 
 cv2.waitKey(0)
