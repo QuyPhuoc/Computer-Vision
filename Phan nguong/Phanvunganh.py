@@ -1,7 +1,6 @@
 #Phân ngưỡng nhị phân
 import cv2
 import matplotlib.pyplot as plt
-from torch.ao.nn.quantized.functional import threshold
 
 img = cv2.imread(r'C:\Anhdep\trump.jpg')
 # img1 = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
