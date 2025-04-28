@@ -11,12 +11,13 @@ neg_img = 255 - crop
 #Vì vậy phải đổi đúng hệ màu
 img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 crop = cv2.cvtColor(crop, cv2.COLOR_BGR2RGB)
-neg_img = cv2.cvtColor(neg_img, cv2.COLOR_BGR2RGB)
+neg = cv2.cvtColor(neg_img, cv2.COLOR_BGR2RGB)
+gray_neg = cv2.cvtColor(neg, cv2.COLOR_BGR2GRAY)
 #Hiện ảnh trên matplotlib
-array_img = [img_rgb, crop, neg_img]
+array_img = [img_rgb, crop, gray_neg]
 title_array = ['Anh 1', 'Anh 2', 'Anh 3']
 for i in range(3):
-    plt.subplot(1, 3, i + 1), plt.imshow(array_img[i]), plt.axis('off'), plt.title(title_array[i])
+    plt.subplot(1, 3, i + 1), plt.imshow(array_img[i], cmap='gray'), plt.axis('off'), plt.title(title_array[i])
 # plt.subplot(311), plt.imshow(img_rgb), plt.axis('off'), plt.title('Anh 1')
 # plt.subplot(312), plt.imshow(crop), plt.axis('off'), plt.title('Anh 2')
 # plt.subplot(313), plt.imshow(neg_img), plt.axis('off'), plt.title('Anh 3')
