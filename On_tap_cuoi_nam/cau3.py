@@ -20,7 +20,7 @@ while True:
     new = np.float32([[1, 0, 1],[0,1,x]])
     tran1 = cv2.warpAffine(img, new, (w,h))
     cv2.imshow('Hoa', tran1)
-    if cv2.waitKey(25) == ord('x'):
+    if cv2.waitKey(25) == ord('q'):
         break
 
 cv2.destroyAllWindows()
