@@ -3,16 +3,16 @@ import matplotlib.pyplot as plt
 
 img = cv2.imread(r'C:\Anhdep\coco.jpg')
 img = cv2.resize(img, None, fx = 2, fy = 2)
-
+img1 = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 #Sử dụng các bộ lọc khác nhau
 #Bộ lọc trung bình
-img_blur = cv2.blur(img, (5,5))
+img_blur = cv2.blur(img1, (5,5))
 #Bộ lọc trung vị
-img_median = cv2.medianBlur(img, 7)
+img_median = cv2.medianBlur(img1, 7)
 #Bộ lọc Gauss
-img_gauss = cv2.GaussianBlur(img, (5,5), 9)
+img_gauss = cv2.GaussianBlur(img1, (5,5), 9)
 #Bộ lọc song phương
-img_bilateral = cv2.bilateralFilter(img, 9, 50, 50)
+img_bilateral = cv2.bilateralFilter(img1, 9, 50, 50)
 
 #Chuyển đổi sang hệ màu RGB
 new_blur = cv2.cvtColor(img_blur, cv2.COLOR_BGR2RGB)
